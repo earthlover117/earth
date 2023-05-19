@@ -60,7 +60,7 @@
 									<div class="content">
 										<h2 class="major">DEFORESTACIÓN EN EL CHOCÓ</h2>
 										<p>El Chocó alberga una de las selvas tropicales más biodiversas del mundo, con una gran variedad de especies de plantas, animales y ecosistemas. Sin embargo, la región enfrenta desafíos ambientales graves debido a la expansión de actividades humanas como la minería ilegal, la agricultura de subsistencia, la tala ilegal de madera y la construcción de carreteras y proyectos de infraestructura.</p>
-										<a href="#" class="special">Learn more</a>
+										
 									</div>
 								</div>
 							</section>
@@ -70,9 +70,14 @@
 								<div class="inner">
 									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+										<h2 class="major">CONSULTA:</h2>
+										<p>Teniendo en cuenta los registros que pude hallar en datos abiertos acerca de la deforestación en el chocó realice esta consulta que nos dice que municipios tuvieron la mayor cantidad de registros de deforestacion por diferentes causas entre el año 2015 y el año 2020 </p>
+										<pre><code>SELECT DISTINCT COUNT (ID) AS cantidad_de_registros, MUNICIPIO, A__O
+ FROM `proy-int-a-ing-sist.earth_choco.Areas_deforestadas_choco` 
+ WHERE A__O <2021 AND A__O>2014
+ GROUP BY MUNICIPIO, A__O
+ ORDER BY cantidad_de_registros DESC
+</code></pre>
 									</div>
 								</div>
 							</section>
